@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: hackrx-rag-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PINECONE_API_KEY
+        value: pcsk_6gcBSp_2ufJs9GCNpZwN9pztv1ggbFNbJhr3w2E2wKSfyyB7iGqcuzee79apu8weRx9D7s
+    plan: free

@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+transformers
+torch
+sentence-transformers
+PyPDF2
+pinecone-client
+langchain
+pinecone
+pydantic
+accelerate
+requests
+tqdm
+python-dotenv
