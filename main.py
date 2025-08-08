@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Request
 from pydantic import BaseModel
-from utils.pdf_utils import download_pdf, extract_text_from_pdf
-from utils.embedding import embed_and_store
-from utils.rag import retrieve_docs, generate_answer, clean_model_output, extract_clean_answer
+from pdf_utils import download_pdf, extract_text_from_pdf
+from embedding import embed_and_store
+from rag import retrieve_docs, generate_answer, clean_model_output, extract_clean_answer
 import os
 
 app = FastAPI()
@@ -39,3 +39,4 @@ def run_qa(request: QARequest):
         answers.append(cleaned)
 
     return {"answers": answers}
+
